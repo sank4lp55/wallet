@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '  Wallet module',
+      title: 'wallet mod',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
