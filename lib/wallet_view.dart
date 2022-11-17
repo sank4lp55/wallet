@@ -3,10 +3,12 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:wallet/_mock_data/mock.dart';
 import 'package:wallet/utils/constants.dart';
 import 'dart:ui';
 
 import 'controllers/wallet_controller.dart';
+import 'dart:ui';
 
 class WalletPage extends StatefulWidget {
   const WalletPage({super.key});
@@ -55,9 +57,7 @@ class _WalletPageState extends State<WalletPage> {
                       ],
                     ),
                     child: GestureDetector(
-                      onTap: () {
-                        c.addCoins();
-                      },
+                      onTap: () {},
                       child: Container(
                         width: size.width * 0.44,
                         height: size.width * 0.44,
@@ -71,7 +71,7 @@ class _WalletPageState extends State<WalletPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                                child: Text("00",
+                                child: Text("${currentUserWallet.yourCoins}",
                                     style: TextStyle(
                                         fontSize: size.width * 0.12,
                                         color: Colors.white,
@@ -110,7 +110,7 @@ class _WalletPageState extends State<WalletPage> {
                     ),
                     child: GestureDetector(
                       onTap: () {
-                        c.addCoins();
+                        ;
                       },
                       child: Container(
                         width: size.width * 0.55,
@@ -155,7 +155,7 @@ class _WalletPageState extends State<WalletPage> {
                                     color: Colors.black))),
                         SizedBox(height: size.width * 0.005),
                         Container(
-                            child: Text("00",
+                            child: Text("${currentUserWallet.totalEarnings}",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: size.width * 0.1,
@@ -184,7 +184,7 @@ class _WalletPageState extends State<WalletPage> {
                                     color: Colors.black))),
                         SizedBox(height: size.width * 0.005),
                         Container(
-                            child: Text("00",
+                            child: Text("${currentUserWallet.totalSpendings}",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: size.width * 0.1,
@@ -236,7 +236,7 @@ class _WalletPageState extends State<WalletPage> {
                                     color: Colors.black))),
                         SizedBox(height: size.width * 0.005),
                         Container(
-                            child: Text("00",
+                            child: Text("${currentUserWallet.coinsTimeSpent}",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: size.width * 0.15,
@@ -244,7 +244,7 @@ class _WalletPageState extends State<WalletPage> {
                         SizedBox(height: size.width * 0.01),
                         Container(
                             child: Text(
-                          "Daily Check-ins",
+                          "Time Spent on app",
                           style: TextStyle(
                               fontSize: size.width * 0.04, color: Colors.black),
                         )),
@@ -271,7 +271,8 @@ class _WalletPageState extends State<WalletPage> {
                                     color: Colors.black))),
                         SizedBox(height: size.width * 0.005),
                         Container(
-                            child: Text("00",
+                            child: Text(
+                                "${currentUserWallet.coinsDailyCheckIns}",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: size.width * 0.15,
@@ -311,7 +312,7 @@ class _WalletPageState extends State<WalletPage> {
                                     color: Colors.black))),
                         SizedBox(height: size.width * 0.005),
                         Container(
-                            child: Text("00",
+                            child: Text("${currentUserWallet.coinsVideoUpload}",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: size.width * 0.15,
@@ -319,7 +320,7 @@ class _WalletPageState extends State<WalletPage> {
                         SizedBox(height: size.width * 0.01),
                         Container(
                             child: Text(
-                          "Daily Check-ins",
+                          "Video Upload",
                           style: TextStyle(
                               fontSize: size.width * 0.04, color: Colors.black),
                         )),
@@ -346,7 +347,7 @@ class _WalletPageState extends State<WalletPage> {
                                     color: Colors.black))),
                         SizedBox(height: size.width * 0.005),
                         Container(
-                            child: Text("00",
+                            child: Text("${currentUserWallet.coinsFromFans}",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: size.width * 0.15,
@@ -354,7 +355,7 @@ class _WalletPageState extends State<WalletPage> {
                         SizedBox(height: size.width * 0.01),
                         Container(
                             child: Text(
-                          "Daily Check-ins",
+                          "From your fans",
                           style: TextStyle(
                               fontSize: size.width * 0.04, color: Colors.black),
                         )),
@@ -412,7 +413,7 @@ class _WalletPageState extends State<WalletPage> {
                               ),
                               child: Center(
                                   child: Text(
-                                "00",
+                                "${currentUserWallet.coinsEveryTenMinutes}",
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
@@ -465,7 +466,7 @@ class _WalletPageState extends State<WalletPage> {
                               ),
                               child: Center(
                                   child: Text(
-                                "00",
+                                "${currentUserWallet.coinsDailyCheckIns}",
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
@@ -518,7 +519,7 @@ class _WalletPageState extends State<WalletPage> {
                               ),
                               child: Center(
                                   child: Text(
-                                "00",
+                                "${currentUserWallet.coinsVideoUpload}",
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
